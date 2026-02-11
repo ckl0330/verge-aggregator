@@ -10,206 +10,127 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #1a1a1a;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             line-height: 1.6;
             padding: 40px 20px;
             min-height: 100vh;
         }
-        
+
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             background-color: #ffffff;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        
+
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 3px solid #e0e0e0;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #000000;
         }
-        
+
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 10px;
-            color: #000000;
-            font-weight: 800;
-            letter-spacing: -1px;
         }
-        
+
         .subtitle {
-            font-size: 1.1em;
-            color: #666666;
-            margin-top: 10px;
+            font-size: 1em;
+            color: #333333;
         }
-        
+
         .stats-container {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
-        
+
         .stats-box {
-            flex: 1;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            background-color: #f5f5f5;
+            padding: 15px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            text-align: center;
         }
-        
+
         .stats-label {
             font-size: 0.9em;
-            opacity: 0.9;
             margin-bottom: 5px;
         }
-        
+
         .stats-value {
-            font-size: 2.5em;
-            font-weight: 700;
+            font-size: 2em;
+            font-weight: bold;
         }
-        
+
         .article-list {
             list-style: none;
         }
-        
+
         .article-item {
-            margin-bottom: 20px;
-            padding: 22px;
-            border-left: 4px solid transparent;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 3px solid #000000;
+            border-radius: 4px;
+            transition: all 0.2s ease;
         }
-        
+
         .article-item:hover {
-            background: linear-gradient(to right, #f0f0f0 0%, #fafafa 100%);
-            border-left-color: #667eea;
-            transform: translateX(8px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            background-color: #f0f0f0;
+            transform: translateX(4px);
         }
-        
+
         .article-link {
-            color: #1a1a1a;
+            color: #000000;
             text-decoration: none;
-            font-size: 1.15em;
-            display: block;
+            font-size: 1.1em;
             font-weight: 600;
-            transition: color 0.2s;
-            line-height: 1.5;
         }
-        
+
         .article-link:hover {
-            color: #667eea;
+            text-decoration: underline;
         }
-        
+
         .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 10px;
-            color: #888888;
-            font-size: 0.9em;
+            margin-top: 8px;
+            font-size: 0.85em;
+            color: #555555;
         }
-        
-        .article-date {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .article-date::before {
-            content: "📅";
-            font-size: 0.9em;
-        }
-        
-        .loading {
-            text-align: center;
-            padding: 80px 20px;
-        }
-        
-        .spinner {
-            width: 50px;
-            height: 50px;
-            margin: 0 auto 20px;
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #667eea;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .loading-text {
-            font-size: 1.2em;
-            color: #666;
-            margin-top: 15px;
-        }
-        
-        .empty-state {
+
+        .loading, .empty-state {
             text-align: center;
             padding: 60px 20px;
-            color: #666;
+            color: #555555;
         }
-        
-        .empty-state-icon {
-            font-size: 4em;
-            margin-bottom: 20px;
-        }
-        
+
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #e0e0e0;
-            color: #888;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #000000;
+            color: #555555;
             font-size: 0.9em;
         }
-        
+
         footer a {
-            color: #667eea;
+            color: #000000;
             text-decoration: none;
         }
-        
+
         footer a:hover {
             text-decoration: underline;
         }
-        
-        /* Responsive */
+
         @media (max-width: 768px) {
-            body {
-                padding: 20px 10px;
-            }
-            
-            .container {
-                padding: 30px 20px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .stats-container {
-                flex-direction: column;
-            }
-            
-            .article-link {
-                font-size: 1em;
-            }
-            
-            .article-item:hover {
-                transform: translateX(4px);
-            }
+            body { padding: 20px 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 2em; }
+            .article-link { font-size: 1em; }
         }
     </style>
 </head>
@@ -219,7 +140,7 @@
             <h1>The Verge</h1>
             <p class="subtitle">Article Aggregator - January 1, 2022 onwards</p>
         </div>
-        
+
         {% if articles %}
         <div class="stats-container">
             <div class="stats-box">
@@ -227,7 +148,7 @@
                 <div class="stats-value">{{ total }}</div>
             </div>
         </div>
-        
+
         <ul class="article-list">
             {% for article in articles %}
             <li class="article-item">
@@ -235,31 +156,20 @@
                     {{ article.title }}
                 </a>
                 <div class="article-meta">
-                    <span class="article-date">
-                        {{ article.date.strftime('%B %d, %Y') }}
-                    </span>
+                    {{ article.date.strftime('%B %d, %Y') }}
                 </div>
             </li>
             {% endfor %}
         </ul>
-        
+
         {% else %}
         <div class="loading">
-            <div class="spinner"></div>
-            <div class="loading-text">
-                Fetching articles from The Verge...
-                <br>
-                <small>This should only take a few seconds</small>
-            </div>
+            Loading articles...
         </div>
         {% endif %}
-        
+
         <footer>
-            <p>
-                Data fetched from <a href="https://www.theverge.com" target="_blank">The Verge</a> RSS feeds
-                <br>
-                Articles are cached for 1 hour for better performance
-            </p>
+            Data fetched from <a href="https://www.theverge.com" target="_blank">The Verge</a>. Articles cached for 1 hour.
         </footer>
     </div>
 </body>
